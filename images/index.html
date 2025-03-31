@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Podcast Like The Pro’s</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #0a2540;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .bg-top-left,
+    .bg-top-right,
+    .bg-bottom-left,
+    .bg-bottom-right {
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .bg-top-left {
+      width: 100px;
+      height: 100px;
+      background-color: #3cb371;
+      top: -50px;
+      left: -50px;
+    }
+
+    .bg-top-right {
+      width: 180px;
+      height: 180px;
+      background-color: #3cb371;
+      top: -80px;
+      right: -60px;
+    }
+
+    .bg-bottom-left {
+      width: 220px;
+      height: 220px;
+      background-color: #3cb371;
+      bottom: -60px;
+      left: -80px;
+    }
+
+    .bg-bottom-right {
+      width: 700px;
+      height: 700px;
+      background-color: #0a5c36;
+      bottom: -350px;
+      right: -200px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      min-height: 100vh;
+    }
+
+    .text-content {
+      max-width: 600px;
+      flex: 1;
+    }
+
+    .text-content h1 {
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      line-height: 1.1;
+    }
+
+    .text-content p {
+      font-size: 1.25rem;
+      color: #1c2e45;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .image-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-content img {
+      width: 100%;
+      max-width: 620px;
+      height: auto;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-content img:hover {
+      transform: translateY(-8px);
+    }
+
+    .footer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: -80px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .footer-nav {
+      background: white;
+      padding: 15px 50px;
+      border-radius: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      gap: 40px;
+    }
+
+    .footer-nav a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #0a2540;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #3cb371;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+        padding-top: 80px;
+        text-align: center;
+      }
+
+      .text-content h1 {
+        font-size: 3.5rem;
+      }
+
+      .footer-nav {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 12px 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .text-content h1 {
+        font-size: 2.8rem;
+      }
+
+      .text-content p {
+        font-size: 1rem;
+      }
+
+      .footer-nav a {
+        font-size: 1rem;
+      }
+
+      .image-content img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Circles -->
+  <div class="bg-top-left"></div>
+  <div class="bg-top-right"></div>
+  <div class="bg-bottom-left"></div>
+  <div class="bg-bottom-right"></div>
+
+  <div class="container">
+    <!-- Text Content -->
+    <div class="text-content">
+      <h1>Podcast Like <br>The Pro’s</h1>
+      <p>Prepare Plan & Produce Your Best Podcast Possible. Features like AI producers take your prepared material and help feed the talent quality up to date talking points</p>
+    </div>
+
+    <!-- Image Content -->
+    <div class="image-content">
+      <img src="Computerasset.png" alt="Podcast Dashboard" />
+    </div>
+  </div>
+
+  <!-- Footer Navigation -->
+  <div class="footer">
+    <div class="footer-nav">
+      <a href="#">About</a>
+      <a href="#">Policy</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+</body>
+</html>
