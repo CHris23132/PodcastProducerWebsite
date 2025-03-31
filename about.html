@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Podcast Like The Pro's</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #0a2540;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .bg-top-left,
+    .bg-top-right,
+    .bg-bottom-left,
+    .bg-bottom-right {
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .bg-top-left {
+      width: 100px;
+      height: 100px;
+      background-color: #3cb371;
+      top: -50px;
+      left: -50px;
+    }
+
+    .bg-top-right {
+      width: 180px;
+      height: 180px;
+      background-color: #3cb371;
+      top: -80px;
+      right: -60px;
+    }
+
+    .bg-bottom-left {
+      width: 220px;
+      height: 220px;
+      background-color: #3cb371;
+      bottom: -60px;
+      left: -80px;
+    }
+
+    .bg-bottom-right {
+      width: 700px;
+      height: 700px;
+      background-color: #0a5c36;
+      bottom: -350px;
+      right: -200px;
+    }
+
+    /* Optional: Use background image instead of color */
+    .bg-image {
+      background-image: url('images/background.png');
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      opacity: 0.1; /* Adjust as needed */
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 30px;
+      min-height: 100vh;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #0a2540;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #3cb371;
+      font-weight: 600;
+    }
+
+    .content-section {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .content-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0a2540;
+    }
+
+    .content-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #1c2e45;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: #f5f9ff;
+      border-radius: 15px;
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #0a2540;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #1c2e45;
+    }
+
+    .developer-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 60px;
+      padding: 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .developer-profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 5px solid #3cb371;
+    }
+
+    .developer-profile h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #0a2540;
+    }
+
+    .developer-profile h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #3cb371;
+    }
+
+    .developer-profile p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #1c2e45;
+    }
+
+    .footer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    .footer-nav {
+      background: white;
+      padding: 15px 50px;
+      border-radius: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      gap: 40px;
+    }
+
+    .footer-nav a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #0a2540;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #3cb371;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 30px;
+      text-decoration: none;
+      color: #3cb371;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      transform: translateX(-5px);
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2.8rem;
+      }
+
+      .content-section {
+        padding: 30px;
+      }
+
+      .content-section h2 {
+        font-size: 1.8rem;
+      }
+      
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .developer-profile {
+        padding: 30px 20px;
+      }
+
+      .footer-nav {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 12px 30px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 2.2rem;
+      }
+
+      .content-section h2 {
+        font-size: 1.5rem;
+      }
+
+      .content-section p,
+      .developer-profile p {
+        font-size: 1rem;
+      }
+
+      .footer-nav a {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Circles -->
+  <div class="bg-top-left"></div>
+  <div class="bg-top-right"></div>
+  <div class="bg-bottom-left"></div>
+  <div class="bg-bottom-right"></div>
+  
+  <!-- Optional: Background image layer -->
+  <div class="bg-image"></div>
+
+  <div class="container">
+    <a href="index.html" class="back-button">← Back to Home</a>
+    
+    <div class="header">
+      <h1>About Podcast Like The Pro's</h1>
+      <p>Elevate your podcast production with professional tools</p>
+    </div>
+
+    <div class="content-section">
+      <h2>Professional Podcast Production Tools</h2>
+      <p>Just like a professional producer on a high production value television show, our platform provides the tools you need to create exceptional podcasts. The talent needs more talking points? We've got you covered. Need accurate data at the ready to give a quick summary of relevant up-to-date information? That's what we do best.</p>
+      
+      <p>Keep your show on track and don't forget a single segment with our easy-to-use topic rundown and timer. We use AI as well as our own search algorithm to produce up-to-date relevant results with our feed talent feature. Become an absolute pro with AI producer.</p>
+      
+      <p>Increase confidence in your ability to deliver a great show when you plan in advance and have everything pre-prepared. A first of its kind in podcasting software tools that can really help elevate your production value with a simple structured planning approach and cool AI features.</p>
+      
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>AI Producer</h3>
+          <p>Our AI producers take your prepared material and help feed the talent quality up-to-date talking points.</p>
+        </div>
+        
+        <div class="feature-card">
+          <h3>Topic Rundown</h3>
+          <p>Keep the show on track and don't forget a single segment with your easy-to-use topic rundown and timer.</p>
+        </div>
+        
+        <div class="feature-card">
+          <h3>Fun Facts</h3>
+          <p>Access up-to-date, recent information and polished talking points to make sure you sound professional and accurately sourced.</p>
+        </div>
+        
+        <div class="feature-card">
+          <h3>Increase Confidence</h3>
+          <p>Increase confidence in your ability to deliver a great show when you plan in advance and have everything pre-prepared.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="developer-profile">
+      <img src="images/headshot-5.png" alt="Christopher Walsh">
+      <h2>Christopher Walsh</h2>
+      <h3>Senior Developer</h3>
+      <p>Christopher Walsh is a passionate senior developer who has developed many successful applications throughout his career. As the solo developer of this project, Christopher brings his extensive experience and dedication to creating tools that empower podcast creators.</p>
+      <p>His passion for designing great products for great people drives him to continuously improve and innovate. Christopher believes that with the right tools, anyone can create professional-quality podcasts that engage and delight audiences.</p>
+    </div>
+  </div>
+
+  <!-- Footer Navigation -->
+  <div class="footer">
+    <div class="footer-nav">
+      <a href="about.html">About</a>
+      <a href="#">Policy</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+</body>
+</html> 
