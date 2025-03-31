@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - Podcast Like The Pro's</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #0a2540;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .bg-top-left,
+    .bg-top-right,
+    .bg-bottom-left,
+    .bg-bottom-right {
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .bg-top-left {
+      width: 100px;
+      height: 100px;
+      background-color: #3cb371;
+      top: -50px;
+      left: -50px;
+    }
+
+    .bg-top-right {
+      width: 180px;
+      height: 180px;
+      background-color: #3cb371;
+      top: -80px;
+      right: -60px;
+    }
+
+    .bg-bottom-left {
+      width: 220px;
+      height: 220px;
+      background-color: #3cb371;
+      bottom: -60px;
+      left: -80px;
+    }
+
+    .bg-bottom-right {
+      width: 700px;
+      height: 700px;
+      background-color: #0a5c36;
+      bottom: -350px;
+      right: -200px;
+    }
+
+    /* Optional: Use background image instead of color */
+    .bg-image {
+      background-image: url('images/background.png');
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      opacity: 0.1; /* Adjust as needed */
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 30px;
+      min-height: 100vh;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #0a2540;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #3cb371;
+      font-weight: 600;
+    }
+
+    .policy-section {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .policy-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #0a2540;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .policy-section h3 {
+      font-size: 1.4rem;
+      margin: 30px 0 15px;
+      color: #0a2540;
+    }
+
+    .policy-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #1c2e45;
+    }
+
+    .policy-section ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    .policy-section li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      color: #1c2e45;
+    }
+
+    .policy-highlight {
+      background: #f5f9ff;
+      border-left: 4px solid #3cb371;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .policy-highlight p {
+      margin-bottom: 0;
+    }
+
+    .footer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    .footer-nav {
+      background: white;
+      padding: 15px 50px;
+      border-radius: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      gap: 40px;
+    }
+
+    .footer-nav a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #0a2540;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #3cb371;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 30px;
+      text-decoration: none;
+      color: #3cb371;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .back-button:hover {
+      transform: translateX(-5px);
+    }
+
+    .last-updated {
+      text-align: right;
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-top: 40px;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2.8rem;
+      }
+
+      .policy-section {
+        padding: 30px;
+      }
+
+      .policy-section h2 {
+        font-size: 1.6rem;
+      }
+
+      .policy-section h3 {
+        font-size: 1.3rem;
+      }
+
+      .footer-nav {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 12px 30px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 2.2rem;
+      }
+
+      .policy-section h2 {
+        font-size: 1.4rem;
+      }
+
+      .policy-section p,
+      .policy-section li {
+        font-size: 1rem;
+      }
+
+      .footer-nav a {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Circles -->
+  <div class="bg-top-left"></div>
+  <div class="bg-top-right"></div>
+  <div class="bg-bottom-left"></div>
+  <div class="bg-bottom-right"></div>
+  
+  <!-- Optional: Background image layer -->
+  <div class="bg-image"></div>
+
+  <div class="container">
+    <a href="index.html" class="back-button">← Back to Home</a>
+    
+    <div class="header">
+      <h1>Privacy Policy</h1>
+      <p>Your privacy is important to us</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Privacy Policy for Podcast Like The Pro's</h2>
+      <p>Last Updated: June 2023</p>
+      
+      <div class="policy-highlight">
+        <p><strong>Key Points:</strong> Podcast Like The Pro's does not collect personal data. All content is stored locally on your device. We do not sell or share your information with third parties.</p>
+      </div>
+      
+      <h3>Introduction</h3>
+      <p>Welcome to Podcast Like The Pro's. We respect your privacy and are committed to protecting any information that may be processed when you use our application. This Privacy Policy explains our practices regarding data handling and your rights concerning your information.</p>
+      
+      <h3>Information We Don't Collect</h3>
+      <p>Podcast Like The Pro's is designed with privacy in mind. We do not:</p>
+      <ul>
+        <li>Collect personal information from you</li>
+        <li>Track your usage patterns</li>
+        <li>Store your podcast content on our servers</li>
+        <li>Maintain user accounts or profiles</li>
+        <li>Use cookies or similar tracking technologies</li>
+      </ul>
+      
+      <h3>Local Storage</h3>
+      <p>All your podcast planning, notes, and content are stored locally on your device. This means:</p>
+      <ul>
+        <li>Your content remains private and under your control</li>
+        <li>You maintain ownership of all your content</li>
+        <li>Your data persists between sessions without being transmitted to external servers</li>
+        <li>You are responsible for backing up your own data</li>
+      </ul>
+      
+      <h3>Third-Party Services</h3>
+      <p>Our application may interact with third-party services to provide certain features:</p>
+      <ul>
+        <li><strong>Search Functionality:</strong> When you use search features, queries may be processed through Google's search services. These queries are subject to Google's privacy policy.</li>
+        <li><strong>AI Features:</strong> Our AI producer features utilize OpenAI's services for content summarization and suggestions. When you use these features, the specific content being processed is temporarily shared with OpenAI and is subject to their privacy policy.</li>
+      </ul>
+      <p>We do not log or store the search queries or content sent to these third-party services. However, these third parties may have their own data collection and retention policies that are outside our control. We encourage you to review their privacy policies:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+        <li><a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI Privacy Policy</a></li>
+      </ul>
+      
+      <h3>Data Security</h3>
+      <p>While we don't store your data on our servers, we've implemented reasonable security measures within our application to protect the local storage of your information. However, no method of electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+      
+      <h3>Children's Privacy</h3>
+      <p>Our application is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us through our Support page.</p>
+      
+      <h3>Changes to This Privacy Policy</h3>
+      <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
+      
+      <div class="last-updated">
+        This policy was last updated on June 15, 2023
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Navigation -->
+  <div class="footer">
+    <div class="footer-nav">
+      <a href="about.html">About</a>
+      <a href="policy.html">Policy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</body>
+</html> 

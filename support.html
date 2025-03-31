@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Podcast Like The Pro's</title>
+  <title>Support - Podcast Like The Pro's</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet"/>
@@ -100,7 +100,7 @@
       font-weight: 600;
     }
 
-    .content-section {
+    .support-section {
       background: white;
       border-radius: 20px;
       padding: 40px;
@@ -108,88 +108,86 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
 
-    .content-section h2 {
-      font-size: 2rem;
+    .support-section h2 {
+      font-size: 1.8rem;
       margin-bottom: 20px;
+      color: #0a2540;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .support-section h3 {
+      font-size: 1.4rem;
+      margin: 30px 0 15px;
       color: #0a2540;
     }
 
-    .content-section p {
+    .support-section p {
       font-size: 1.1rem;
       line-height: 1.7;
       margin-bottom: 20px;
       color: #1c2e45;
     }
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      margin-top: 40px;
+    .support-section ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
     }
 
-    .feature-card {
+    .support-section li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      color: #1c2e45;
+    }
+
+    .contact-card {
       background: #f5f9ff;
       border-radius: 15px;
-      padding: 25px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .feature-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
-      color: #0a2540;
-    }
-
-    .feature-card p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #1c2e45;
-    }
-
-    .developer-profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 30px;
+      margin: 30px 0;
       text-align: center;
-      margin-top: 60px;
-      padding: 40px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
     }
 
-    .developer-profile img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 5px solid #3cb371;
+    .contact-card:hover {
+      transform: translateY(-5px);
     }
 
-    .developer-profile h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+    .contact-card h3 {
+      margin-top: 0;
       color: #0a2540;
     }
 
-    .developer-profile h3 {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      color: #3cb371;
+    .contact-email {
+      display: inline-block;
+      margin: 15px 0;
+      padding: 12px 25px;
+      background-color: #3cb371;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
 
-    .developer-profile p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      max-width: 700px;
-      margin: 0 auto;
+    .contact-email:hover {
+      background-color: #2a9959;
+    }
+
+    .faq-item {
+      margin-bottom: 25px;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      color: #0a2540;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .faq-answer {
       color: #1c2e45;
     }
 
@@ -241,20 +239,16 @@
         font-size: 2.8rem;
       }
 
-      .content-section {
+      .support-section {
         padding: 30px;
       }
 
-      .content-section h2 {
-        font-size: 1.8rem;
-      }
-      
-      .feature-grid {
-        grid-template-columns: 1fr;
+      .support-section h2 {
+        font-size: 1.6rem;
       }
 
-      .developer-profile {
-        padding: 30px 20px;
+      .support-section h3 {
+        font-size: 1.3rem;
       }
 
       .footer-nav {
@@ -270,12 +264,12 @@
         font-size: 2.2rem;
       }
 
-      .content-section h2 {
-        font-size: 1.5rem;
+      .support-section h2 {
+        font-size: 1.4rem;
       }
 
-      .content-section p,
-      .developer-profile p {
+      .support-section p,
+      .support-section li {
         font-size: 1rem;
       }
 
@@ -300,47 +294,57 @@
     <a href="index.html" class="back-button">← Back to Home</a>
     
     <div class="header">
-      <h1>About Podcast Like The Pro's</h1>
-      <p>Elevate your podcast production with professional tools</p>
+      <h1>Support</h1>
+      <p>We're here to help you succeed with your podcast</p>
     </div>
 
-    <div class="content-section">
-      <h2>Professional Podcast Production Tools</h2>
-      <p>Just like a professional producer on a high production value television show, our platform provides the tools you need to create exceptional podcasts. The talent needs more talking points? We've got you covered. Need accurate data at the ready to give a quick summary of relevant up-to-date information? That's what we do best.</p>
+    <div class="support-section">
+      <h2>Contact Us</h2>
       
-      <p>Keep your show on track and don't forget a single segment with our easy-to-use topic rundown and timer. We use AI as well as our own search algorithm to produce up-to-date relevant results with our feed talent feature. Become an absolute pro with AI producer.</p>
-      
-      <p>Increase confidence in your ability to deliver a great show when you plan in advance and have everything pre-prepared. A first of its kind in podcasting software tools that can really help elevate your production value with a simple structured planning approach and cool AI features.</p>
-      
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>AI Producer</h3>
-          <p>Our AI producers take your prepared material and help feed the talent quality up-to-date talking points.</p>
-        </div>
-        
-        <div class="feature-card">
-          <h3>Topic Rundown</h3>
-          <p>Keep the show on track and don't forget a single segment with your easy-to-use topic rundown and timer.</p>
-        </div>
-        
-        <div class="feature-card">
-          <h3>Fun Facts</h3>
-          <p>Access up-to-date, recent information and polished talking points to make sure you sound professional and accurately sourced.</p>
-        </div>
-        
-        <div class="feature-card">
-          <h3>Increase Confidence</h3>
-          <p>Increase confidence in your ability to deliver a great show when you plan in advance and have everything pre-prepared.</p>
-        </div>
+      <div class="contact-card">
+        <h3>Need assistance with Podcast Like The Pro's?</h3>
+        <p>Have questions, feedback, or need technical support? Contact the developer directly:</p>
+        <a href="mailto:chris@christopher-walsh-apps.com" class="contact-email">chris@christopher-walsh-apps.com</a>
+        <p>We aim to respond to all inquiries within 24-48 hours.</p>
       </div>
-    </div>
-
-    <div class="developer-profile">
-      <img src="images/headshot-5.png" alt="Christopher Walsh">
-      <h2>Christopher Walsh</h2>
-      <h3>Senior Developer</h3>
-      <p>Christopher Walsh is a passionate senior developer who has developed many successful applications throughout his career. As the solo developer of this project, Christopher brings his extensive experience and dedication to creating tools that empower podcast creators.</p>
-      <p>His passion for designing great products for great people drives him to continuously improve and innovate. Christopher believes that with the right tools, anyone can create professional-quality podcasts that engage and delight audiences.</p>
+      
+      <h3>Frequently Asked Questions</h3>
+      
+      <div class="faq-item">
+        <div class="faq-question">How do I save my podcast planning?</div>
+        <div class="faq-answer">All your work is automatically saved locally on your device. There's no need to manually save your progress as you work.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Can I export my podcast notes?</div>
+        <div class="faq-answer">Yes! You can export your podcast planning and notes in multiple formats including PDF, plain text, and markdown. Look for the export button in the top right corner of your show page.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How does the AI producer feature work?</div>
+        <div class="faq-answer">Our AI producer analyzes your topic and prepared material, then suggests relevant talking points, facts, and questions to enhance your podcast. It helps keep your content fresh and engaging without replacing your unique voice and perspective.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Is my content secure?</div>
+        <div class="faq-answer">Yes. All your podcast content is stored locally on your device. We don't store your content on our servers, which means you maintain complete control and ownership of your material.</div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Can I use Podcast Like The Pro's on multiple devices?</div>
+        <div class="faq-answer">Currently, your content is stored on the device where you created it. We're working on a sync feature for a future update that will allow seamless use across multiple devices.</div>
+      </div>
+      
+      <h3>Troubleshooting</h3>
+      <p>If you're experiencing technical issues with the application:</p>
+      <ul>
+        <li>Make sure you're using the latest version of the application</li>
+        <li>Try restarting the application</li>
+        <li>Check that your device meets the minimum system requirements</li>
+        <li>Clear your application cache (Settings > Storage > Clear Cache)</li>
+      </ul>
+      
+      <p>If you continue to experience issues, please contact us with details about the problem, including your device model and operating system version.</p>
     </div>
   </div>
 
