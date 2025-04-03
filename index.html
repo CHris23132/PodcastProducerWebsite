@@ -128,7 +128,8 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      margin-top: -80px;
+      margin-top: 40px;
+      padding: 40px 0;
       position: relative;
       z-index: 10;
     }
@@ -190,6 +191,121 @@
         max-width: 100%;
       }
     }
+
+    /* Add new styles for video section */
+    .video-section {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-section h2 {
+      font-size: 2.5rem;
+      color: #0a2540;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .video-section {
+        padding: 40px 20px;
+      }
+
+      .video-section h2 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Add new styles for CTA section */
+    .cta-section {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 30px;
+      text-align: center;
+      background: linear-gradient(to right, rgba(60, 179, 113, 0.1), rgba(10, 92, 54, 0.1));
+      border-radius: 30px;
+      margin-top: -100px;
+    }
+
+    .cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-size: 2.8rem;
+      color: #0a2540;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      font-size: 1.2rem;
+      color: #1c2e45;
+      margin-bottom: 30px;
+    }
+
+    .app-store-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      background: #0a2540;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .app-store-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      background: #0a2540;
+    }
+
+    .app-store-button img {
+      height: 30px;
+      width: auto;
+    }
+
+    @media (max-width: 768px) {
+      .cta-section {
+        padding: 40px 20px;
+        margin-top: -50px;
+      }
+
+      .cta-section h2 {
+        font-size: 2.2rem;
+      }
+
+      .cta-section p {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -213,6 +329,32 @@
     <!-- Image Content -->
     <div class="image-content">
       <img src="images/Computerasset.png" alt="Podcast Dashboard" />
+    </div>
+  </div>
+
+  <!-- Add CTA Section -->
+  <div class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Elevate Your Podcast?</h2>
+      <p>Download Podcast Producer now and start creating professional-quality content with AI-powered assistance.</p>
+      <a href="https://apps.apple.com/ca/app/podcast-producer/id6743998963?mt=12" class="app-store-button" target="_blank">
+        <img src="images/App_Store_(iOS).svg.png" alt="App Store Logo">
+        <span>Get it on Mac App Store</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Add Video Section -->
+  <div class="video-section">
+    <h2>See It In Action</h2>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/9MC5egTzxPs?si=TpIGd9x59AraznkV" 
+        title="YouTube video player" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
     </div>
   </div>
 
